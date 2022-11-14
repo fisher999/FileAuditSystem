@@ -12,7 +12,17 @@ Implements files monitor with Apple Endpoint Security framework
 Example of usage: 
 https://drive.google.com/file/d/14P43FlVYL2PTfakD0jiNLmoTf-20OwPv/view?usp=sharing
 
-P.S.: 
+P.S.
+
+Thoughts: 
+Solution of this task is not trivial. These steps are necessary to solve this problem:
+1. Disable SIP. SIP doesn't permit to run programs on mac without special provision files and certificates.
+2. C API. Endpoint security framework has C API that unsafer than Swift. It is easier to crash program.
+3. Debugging. Debugging of System extension is not available for XCode. The exclusive ways are attaching to an extension process through LLDB CLI or debug logs. 
+4. Data sharing. System extensions have own containers in private/var/root that are inaccessible for Apps containers. You should use XPC to communicate between processes. 
+5. Complexity of testing. I think System extensions can be tested only with end2end tests. 
+6. Project options. Different files like signing, building settings, bundle and entitlements should be configured correctly to run program properly.   
+  
 
 Ways to upgrade: 
 1. Make realtime monitor with timer scheduler.
