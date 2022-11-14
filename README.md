@@ -9,6 +9,9 @@ Implements files monitor with Apple Endpoint Security framework
 3. Do something with files in directory
 4. Check working by exporting logs in file
 
+Example of usage: 
+https://drive.google.com/file/d/14P43FlVYL2PTfakD0jiNLmoTf-20OwPv/view?usp=sharing
+
 P.S.: 
 
 Ways to upgrade: 
