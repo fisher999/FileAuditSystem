@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "BF8B3DB6-D9D2-46B6-89FE-F40C0D0A3DA7"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "98305AB4-0174-4D8A-915D-673D272EE5EC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EndpointExtension/Utils/EventHandler.m"
+            startingColumnNumber = "65"
+            endingColumnNumber = "65"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
+            landmarkName = "EventHandler"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

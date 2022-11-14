@@ -7,10 +7,10 @@
 
 import Foundation
 
-public class ConsoleOutput: ILoggerOutput {
-  public init() {}
+class ConsoleOutput: ILoggerOutput {
+  init() {}
   
-  public func log(message: String) {
+  func log(message: String) {
     print(message)
   }
 }

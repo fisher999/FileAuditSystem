@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+let logsProviderServiceName = "fileAuditSystem.EndpointExtension"
+
+typealias ReplyBlock = (Data?) -> ()
+
+@objc protocol ILogsProvider {
+  func setDirectories(_ urls: [String])
+  func provideLogs(replyBlock: @escaping ReplyBlock)
+}

@@ -7,19 +7,88 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		773870132920C4F500A26F84 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B54DF3291C189600701C4B /* Logger.swift */; };
+		773870142920C4F500A26F84 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B54DF3291C189600701C4B /* Logger.swift */; };
+		773870152920C4F900A26F84 /* ILoggerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B54DF6291C191A00701C4B /* ILoggerOutput.swift */; };
+		773870162920C4F900A26F84 /* ILoggerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B54DF6291C191A00701C4B /* ILoggerOutput.swift */; };
+		773870172920C4FD00A26F84 /* ConsoleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7787B252291D650F00AC5D22 /* ConsoleOutput.swift */; };
+		773870182920C4FD00A26F84 /* ConsoleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7787B252291D650F00AC5D22 /* ConsoleOutput.swift */; };
+		773870192920C50100A26F84 /* FileOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E27CB3291EBE9B003BE939 /* FileOutput.swift */; };
+		7738701A2920C50100A26F84 /* FileOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E27CB3291EBE9B003BE939 /* FileOutput.swift */; };
+		7738701B2920C50500A26F84 /* OSLogOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F9F826291FDD8500E878DB /* OSLogOutput.swift */; };
+		7738701C2920C50500A26F84 /* OSLogOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F9F826291FDD8500E878DB /* OSLogOutput.swift */; };
+		7738701E2920C5EB00A26F84 /* ILogsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7738701D2920C5EB00A26F84 /* ILogsProvider.swift */; };
+		7738701F2920C5EB00A26F84 /* ILogsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7738701D2920C5EB00A26F84 /* ILogsProvider.swift */; };
+		773870212920C79900A26F84 /* ListenerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773870202920C79900A26F84 /* ListenerDelegate.swift */; };
+		773870252920CB6800A26F84 /* LogsExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773870242920CB6800A26F84 /* LogsExporter.swift */; };
+		773870272920D00C00A26F84 /* ClientHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773870262920D00C00A26F84 /* ClientHandler.swift */; };
+		773870292920D2E100A26F84 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773870282920D2E100A26F84 /* URL+Extension.swift */; };
+		7738702A2920D2E100A26F84 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773870282920D2E100A26F84 /* URL+Extension.swift */; };
+		7738702C29212FDD00A26F84 /* NSTextView+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7738702B29212FDD00A26F84 /* NSTextView+String.swift */; };
 		77B54DD0291C112A00701C4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B54DCF291C112A00701C4B /* AppDelegate.swift */; };
 		77B54DD2291C112A00701C4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B54DD1291C112A00701C4B /* ViewController.swift */; };
 		77B54DD4291C112C00701C4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77B54DD3291C112C00701C4B /* Assets.xcassets */; };
 		77B54DD7291C112C00701C4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77B54DD5291C112C00701C4B /* Main.storyboard */; };
+		77B54DE5291C136F00701C4B /* libEndpointSecurity.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B54DE4291C136F00701C4B /* libEndpointSecurity.tbd */; };
+		77B54DED291C136F00701C4B /* com.viktor.FileAuditSystem.EndpointExtension.systemextension in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = 77B54DE2291C136F00701C4B /* com.viktor.FileAuditSystem.EndpointExtension.systemextension */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		77B54DFB291C1F4400701C4B /* NSTextView+ILoggerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B54DFA291C1F4400701C4B /* NSTextView+ILoggerOutput.swift */; };
+		77E27CC7291ED204003BE939 /* libbsm.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 77E27CC6291ED1F5003BE939 /* libbsm.tbd */; };
+		77F9F816291F9A4B00E878DB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B54DE7291C136F00701C4B /* main.swift */; };
+		77F9F825291FBA5500E878DB /* EventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F9F824291FBA5500E878DB /* EventHandler.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		77B54DEB291C136F00701C4B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 77B54DC4291C112A00701C4B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 77B54DE1291C136F00701C4B;
+			remoteInfo = EndpointExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		77B54DF1291C136F00701C4B /* Embed System Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(SYSTEM_EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				77B54DED291C136F00701C4B /* com.viktor.FileAuditSystem.EndpointExtension.systemextension in Embed System Extensions */,
+			);
+			name = "Embed System Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		7738701D2920C5EB00A26F84 /* ILogsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ILogsProvider.swift; sourceTree = "<group>"; };
+		773870202920C79900A26F84 /* ListenerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenerDelegate.swift; sourceTree = "<group>"; };
+		773870242920CB6800A26F84 /* LogsExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsExporter.swift; sourceTree = "<group>"; };
+		773870262920D00C00A26F84 /* ClientHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientHandler.swift; sourceTree = "<group>"; };
+		773870282920D2E100A26F84 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
+		7738702B29212FDD00A26F84 /* NSTextView+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextView+String.swift"; sourceTree = "<group>"; };
+		7787B252291D650F00AC5D22 /* ConsoleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleOutput.swift; sourceTree = "<group>"; };
 		77B54DCC291C112A00701C4B /* FileAuditSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileAuditSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B54DCF291C112A00701C4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77B54DD1291C112A00701C4B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		77B54DD3291C112C00701C4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77B54DD6291C112C00701C4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		77B54DD8291C112C00701C4B /* FileAuditSystem.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FileAuditSystem.entitlements; sourceTree = "<group>"; };
+		77B54DE2291C136F00701C4B /* com.viktor.FileAuditSystem.EndpointExtension.systemextension */ = {isa = PBXFileReference; explicitFileType = "wrapper.system-extension"; includeInIndex = 0; path = com.viktor.FileAuditSystem.EndpointExtension.systemextension; sourceTree = BUILT_PRODUCTS_DIR; };
+		77B54DE4291C136F00701C4B /* libEndpointSecurity.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libEndpointSecurity.tbd; path = usr/lib/libEndpointSecurity.tbd; sourceTree = SDKROOT; };
+		77B54DE7291C136F00701C4B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		77B54DE9291C136F00701C4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77B54DEA291C136F00701C4B /* EndpointExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EndpointExtension.entitlements; sourceTree = "<group>"; };
+		77B54DF3291C189600701C4B /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		77B54DF6291C191A00701C4B /* ILoggerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ILoggerOutput.swift; sourceTree = "<group>"; };
+		77B54DFA291C1F4400701C4B /* NSTextView+ILoggerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextView+ILoggerOutput.swift"; sourceTree = "<group>"; };
+		77E27CB3291EBE9B003BE939 /* FileOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileOutput.swift; sourceTree = "<group>"; };
+		77E27CC6291ED1F5003BE939 /* libbsm.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbsm.tbd; path = usr/lib/libbsm.tbd; sourceTree = SDKROOT; };
+		77F9F811291F946300E878DB /* EndpointExtension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EndpointExtension-Bridging-Header.h"; sourceTree = "<group>"; };
+		77F9F823291FBA5500E878DB /* EventHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventHandler.h; sourceTree = "<group>"; };
+		77F9F824291FBA5500E878DB /* EventHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventHandler.m; sourceTree = "<group>"; };
+		77F9F826291FDD8500E878DB /* OSLogOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLogOutput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,13 +99,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		77B54DDF291C136F00701C4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77E27CC7291ED204003BE939 /* libbsm.tbd in Frameworks */,
+				77B54DE5291C136F00701C4B /* libEndpointSecurity.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		773870122920C4D700A26F84 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				77B54DF3291C189600701C4B /* Logger.swift */,
+				77B54DF6291C191A00701C4B /* ILoggerOutput.swift */,
+				7787B252291D650F00AC5D22 /* ConsoleOutput.swift */,
+				77E27CB3291EBE9B003BE939 /* FileOutput.swift */,
+				77F9F826291FDD8500E878DB /* OSLogOutput.swift */,
+				7738701D2920C5EB00A26F84 /* ILogsProvider.swift */,
+				773870282920D2E100A26F84 /* URL+Extension.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		77B54DC3291C112A00701C4B = {
 			isa = PBXGroup;
 			children = (
+				773870122920C4D700A26F84 /* Common */,
 				77B54DCE291C112A00701C4B /* FileAuditSystem */,
+				77B54DE6291C136F00701C4B /* EndpointExtension */,
+				77B54DE3291C136F00701C4B /* Frameworks */,
 				77B54DCD291C112A00701C4B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				77B54DCC291C112A00701C4B /* FileAuditSystem.app */,
+				77B54DE2291C136F00701C4B /* com.viktor.FileAuditSystem.EndpointExtension.systemextension */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -52,6 +148,7 @@
 		77B54DCE291C112A00701C4B /* FileAuditSystem */ = {
 			isa = PBXGroup;
 			children = (
+				77B54DF2291C187E00701C4B /* Utils */,
 				77B54DCF291C112A00701C4B /* AppDelegate.swift */,
 				77B54DD1291C112A00701C4B /* ViewController.swift */,
 				77B54DD3291C112C00701C4B /* Assets.xcassets */,
@@ -59,6 +156,48 @@
 				77B54DD8291C112C00701C4B /* FileAuditSystem.entitlements */,
 			);
 			path = FileAuditSystem;
+			sourceTree = "<group>";
+		};
+		77B54DE3291C136F00701C4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77E27CC6291ED1F5003BE939 /* libbsm.tbd */,
+				77B54DE4291C136F00701C4B /* libEndpointSecurity.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		77B54DE6291C136F00701C4B /* EndpointExtension */ = {
+			isa = PBXGroup;
+			children = (
+				77F9F820291FBA0700E878DB /* Utils */,
+				77B54DE7291C136F00701C4B /* main.swift */,
+				77B54DE9291C136F00701C4B /* Info.plist */,
+				77B54DEA291C136F00701C4B /* EndpointExtension.entitlements */,
+				77F9F811291F946300E878DB /* EndpointExtension-Bridging-Header.h */,
+				773870202920C79900A26F84 /* ListenerDelegate.swift */,
+				773870262920D00C00A26F84 /* ClientHandler.swift */,
+			);
+			path = EndpointExtension;
+			sourceTree = "<group>";
+		};
+		77B54DF2291C187E00701C4B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				77B54DFA291C1F4400701C4B /* NSTextView+ILoggerOutput.swift */,
+				773870242920CB6800A26F84 /* LogsExporter.swift */,
+				7738702B29212FDD00A26F84 /* NSTextView+String.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		77F9F820291FBA0700E878DB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				77F9F823291FBA5500E878DB /* EventHandler.h */,
+				77F9F824291FBA5500E878DB /* EventHandler.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,15 +210,34 @@
 				77B54DC8291C112A00701C4B /* Sources */,
 				77B54DC9291C112A00701C4B /* Frameworks */,
 				77B54DCA291C112A00701C4B /* Resources */,
+				77B54DF1291C136F00701C4B /* Embed System Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				77B54DEC291C136F00701C4B /* PBXTargetDependency */,
 			);
 			name = FileAuditSystem;
 			productName = FileAuditSystem;
 			productReference = 77B54DCC291C112A00701C4B /* FileAuditSystem.app */;
 			productType = "com.apple.product-type.application";
+		};
+		77B54DE1291C136F00701C4B /* EndpointExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77B54DEE291C136F00701C4B /* Build configuration list for PBXNativeTarget "EndpointExtension" */;
+			buildPhases = (
+				77B54DDE291C136F00701C4B /* Sources */,
+				77B54DDF291C136F00701C4B /* Frameworks */,
+				77B54DE0291C136F00701C4B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EndpointExtension;
+			productName = EndpointExtension;
+			productReference = 77B54DE2291C136F00701C4B /* com.viktor.FileAuditSystem.EndpointExtension.systemextension */;
+			productType = "com.apple.product-type.system-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -93,6 +251,10 @@
 				TargetAttributes = {
 					77B54DCB291C112A00701C4B = {
 						CreatedOnToolsVersion = 13.0;
+					};
+					77B54DE1291C136F00701C4B = {
+						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1410;
 					};
 				};
 			};
@@ -110,6 +272,7 @@
 			projectRoot = "";
 			targets = (
 				77B54DCB291C112A00701C4B /* FileAuditSystem */,
+				77B54DE1291C136F00701C4B /* EndpointExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -124,6 +287,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		77B54DE0291C136F00701C4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -131,12 +301,48 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				773870132920C4F500A26F84 /* Logger.swift in Sources */,
+				7738702C29212FDD00A26F84 /* NSTextView+String.swift in Sources */,
+				7738701E2920C5EB00A26F84 /* ILogsProvider.swift in Sources */,
 				77B54DD2291C112A00701C4B /* ViewController.swift in Sources */,
+				773870152920C4F900A26F84 /* ILoggerOutput.swift in Sources */,
 				77B54DD0291C112A00701C4B /* AppDelegate.swift in Sources */,
+				773870192920C50100A26F84 /* FileOutput.swift in Sources */,
+				773870252920CB6800A26F84 /* LogsExporter.swift in Sources */,
+				773870292920D2E100A26F84 /* URL+Extension.swift in Sources */,
+				7738701B2920C50500A26F84 /* OSLogOutput.swift in Sources */,
+				773870172920C4FD00A26F84 /* ConsoleOutput.swift in Sources */,
+				77B54DFB291C1F4400701C4B /* NSTextView+ILoggerOutput.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77B54DDE291C136F00701C4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				773870162920C4F900A26F84 /* ILoggerOutput.swift in Sources */,
+				77F9F816291F9A4B00E878DB /* main.swift in Sources */,
+				773870142920C4F500A26F84 /* Logger.swift in Sources */,
+				77F9F825291FBA5500E878DB /* EventHandler.m in Sources */,
+				7738701A2920C50100A26F84 /* FileOutput.swift in Sources */,
+				7738701C2920C50500A26F84 /* OSLogOutput.swift in Sources */,
+				773870272920D00C00A26F84 /* ClientHandler.swift in Sources */,
+				7738702A2920D2E100A26F84 /* URL+Extension.swift in Sources */,
+				773870182920C4FD00A26F84 /* ConsoleOutput.swift in Sources */,
+				7738701F2920C5EB00A26F84 /* ILogsProvider.swift in Sources */,
+				773870212920C79900A26F84 /* ListenerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		77B54DEC291C136F00701C4B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 77B54DE1291C136F00701C4B /* EndpointExtension */;
+			targetProxy = 77B54DEB291C136F00701C4B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		77B54DD5291C112C00701C4B /* Main.storyboard */ = {
@@ -268,14 +474,20 @@
 		77B54DDC291C112C00701C4B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = FileAuditSystem/FileAuditSystem.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = N28UYC6RTZ;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"@executable_path/../Frameworks",
+					"$(PROJECT_DIR)/Libs",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -284,9 +496,15 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libs",
+					"@executable_path/../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.viktor.FileAuditSystem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -295,14 +513,20 @@
 		77B54DDD291C112C00701C4B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = FileAuditSystem/FileAuditSystem.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = N28UYC6RTZ;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"@executable_path/../Frameworks",
+					"$(PROJECT_DIR)/Libs",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -311,10 +535,77 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libs",
+					"@executable_path/../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.viktor.FileAuditSystem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		77B54DEF291C136F00701C4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = EndpointExtension/EndpointExtension.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EndpointExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = EndpointExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.viktor.FileAuditSystem.EndpointExtension;
+				PRODUCT_NAME = "$(inherited)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "EndpointExtension/EndpointExtension-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		77B54DF0291C136F00701C4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = EndpointExtension/EndpointExtension.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EndpointExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = EndpointExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.viktor.FileAuditSystem.EndpointExtension;
+				PRODUCT_NAME = "$(inherited)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "EndpointExtension/EndpointExtension-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -336,6 +627,15 @@
 			buildConfigurations = (
 				77B54DDC291C112C00701C4B /* Debug */,
 				77B54DDD291C112C00701C4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77B54DEE291C136F00701C4B /* Build configuration list for PBXNativeTarget "EndpointExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77B54DEF291C136F00701C4B /* Debug */,
+				77B54DF0291C136F00701C4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

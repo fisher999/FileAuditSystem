@@ -4,10 +4,43 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>EndpointExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>FileAuditSystem.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>778914FC291F87CF007DDAB7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7798A836291EBB5C000F6737</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>77B54DCB291C112A00701C4B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>77B54DE1291C136F00701C4B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>77F9F800291F8EFC00E878DB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

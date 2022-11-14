@@ -6,11 +6,12 @@
 //
 
 #import <Foundation/Foundation.h>
-
-NS_ASSUME_NONNULL_BEGIN
+#include <EndpointSecurity/EndpointSecurity.h>
+#include <bsm/libbsm.h>
+#include <os/log.h>
 
 @interface EventHandler : NSObject
 
-@end
+- (NSDictionary *)handleMessage: (es_message_t *)message;
 
-NS_ASSUME_NONNULL_END
+@end

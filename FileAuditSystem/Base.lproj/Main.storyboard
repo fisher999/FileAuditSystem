@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -147,8 +149,8 @@
                                                 <action selector="paste:" target="Ady-hI-5gd" id="UvS-8e-Qdg"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Paste and Match Style" keyEquivalent="V" id="WeT-3V-zwk">
-                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                        <menuItem title="Paste and Match Style" keyEquivalent="x" id="WeT-3V-zwk">
+                                            <modifierMask key="keyEquivalentModifierMask" shift="YES" command="YES"/>
                                             <connections>
                                                 <action selector="pasteAsPlainText:" target="Ady-hI-5gd" id="cEh-KX-wJQ"/>
                                             </connections>
@@ -673,7 +675,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="FileAuditSystem" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -703,11 +705,117 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="FileAuditSystem" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lzs-TW-aGL">
+                                <rect key="frame" x="32" y="26" width="416" height="135"/>
+                                <clipView key="contentView" drawsBackground="NO" id="g0d-UE-vDu">
+                                    <rect key="frame" x="0.0" y="0.0" width="401" height="135"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="iud-OF-GLp">
+                                            <rect key="frame" x="0.0" y="0.0" width="401" height="135"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <size key="minSize" width="401" height="135"/>
+                                            <size key="maxSize" width="416" height="10000000"/>
+                                            <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        </textView>
+                                    </subviews>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="qYa-sN-XxZ">
+                                    <rect key="frame" x="-100" y="-100" width="240" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="lxc-I3-AV7">
+                                    <rect key="frame" x="401" y="0.0" width="15" height="135"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sac-qd-ONI">
+                                <rect key="frame" x="298" y="174" width="103" height="32"/>
+                                <buttonCell key="cell" type="push" title="Export logs" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="jwA-gL-tHP">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="didTapExportLogs:" target="XfG-lQ-9wD" id="7uj-fo-WuA"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="amW-mi-tf8">
+                                <rect key="frame" x="170" y="174" width="141" height="32"/>
+                                <buttonCell key="cell" type="push" title="Select directories" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="p1K-oM-uKz">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="didTapSelectDirectories" target="XfG-lQ-9wD" id="3Ut-fY-CYS"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lME-l2-gCI">
+                                <rect key="frame" x="49" y="174" width="132" height="32"/>
+                                <buttonCell key="cell" type="push" title="Install extension" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="O45-KI-LS4">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="didTapInstallExtension:" target="XfG-lQ-9wD" id="rdD-st-T2H"/>
+                                </connections>
+                            </button>
+                            <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHh-Dt-CeC">
+                                <rect key="frame" x="56" y="211" width="338" height="39"/>
+                                <clipView key="contentView" drawsBackground="NO" id="Jgv-i7-5Qx">
+                                    <rect key="frame" x="0.0" y="0.0" width="323" height="39"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView wantsLayer="YES" importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="vUs-gh-u3d">
+                                            <rect key="frame" x="0.0" y="0.0" width="323" height="39"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <size key="minSize" width="323" height="39"/>
+                                            <size key="maxSize" width="380" height="10000000"/>
+                                            <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        </textView>
+                                    </subviews>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="9RK-hz-Ey7">
+                                    <rect key="frame" x="-100" y="-100" width="240" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="ZYr-qR-FZu">
+                                    <rect key="frame" x="323" y="0.0" width="15" height="39"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="amW-mi-tf8" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="35Y-3x-de5"/>
+                            <constraint firstAttribute="trailing" secondItem="Lzs-TW-aGL" secondAttribute="trailing" constant="32" id="7yg-fy-y9I"/>
+                            <constraint firstItem="iud-OF-GLp" firstAttribute="top" secondItem="sac-qd-ONI" secondAttribute="bottom" constant="20" symbolic="YES" id="MZH-Ih-7ei"/>
+                            <constraint firstItem="sac-qd-ONI" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="69" id="MhB-fB-qnc"/>
+                            <constraint firstItem="QHh-Dt-CeC" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="Ots-Sh-rkH"/>
+                            <constraint firstAttribute="trailing" secondItem="QHh-Dt-CeC" secondAttribute="trailing" constant="86" id="SYd-eB-WO4"/>
+                            <constraint firstAttribute="bottom" secondItem="Lzs-TW-aGL" secondAttribute="bottom" constant="26" id="Wl4-nP-wFD"/>
+                            <constraint firstItem="amW-mi-tf8" firstAttribute="top" secondItem="QHh-Dt-CeC" secondAttribute="bottom" constant="10" id="Wn4-XG-Lm8"/>
+                            <constraint firstItem="QHh-Dt-CeC" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="56" id="Y5F-nB-hb9"/>
+                            <constraint firstItem="lME-l2-gCI" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="69" id="ZM5-SO-7ED"/>
+                            <constraint firstItem="Lzs-TW-aGL" firstAttribute="top" secondItem="lME-l2-gCI" secondAttribute="bottom" constant="20" symbolic="YES" id="gOs-XS-K5t"/>
+                            <constraint firstItem="Lzs-TW-aGL" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="32" id="lvM-rk-m3k"/>
+                            <constraint firstItem="iud-OF-GLp" firstAttribute="top" secondItem="amW-mi-tf8" secondAttribute="bottom" constant="20" symbolic="YES" id="qGk-4w-vR9"/>
+                            <constraint firstItem="lME-l2-gCI" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="56" id="qb6-yx-sBu"/>
+                            <constraint firstAttribute="trailing" secondItem="sac-qd-ONI" secondAttribute="trailing" constant="86" id="vPd-BS-SvJ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="directoriesTextView" destination="vUs-gh-u3d" id="myw-1d-hpv"/>
+                        <outlet property="installButton" destination="lME-l2-gCI" id="mdd-Zq-FwC"/>
+                        <outlet property="textView" destination="iud-OF-GLp" id="Q9u-hV-0GN"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

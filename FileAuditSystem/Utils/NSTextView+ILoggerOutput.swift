@@ -10,6 +10,8 @@ import AppKit
 
 extension NSTextView: ILoggerOutput {
   func log(message: String) {
-    textStorage?.append(NSAttributedString(string: "\(message)\n"))
+    DispatchQueue.main.async {
+      self.textStorage?.append(NSAttributedString(string: "\(message)\n"))
+    }
   }
 }

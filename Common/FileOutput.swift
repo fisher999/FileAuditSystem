@@ -8,22 +8,11 @@
 import Foundation
 import OSLog
 
-public protocol FileOutputDelegate: AnyObject {
-  func fileOutput(_ fileOutput: FileOutput, didFailWriteToFile fileURL: URL, error: Error)
-  func fileOutput(_ fileOutput: FileOutput, didWriteMessage message: String)
-}
-
-public extension FileOutputDelegate {
-  func fileOutput(_ fileOutput: FileOutput, didWriteMessage message: String) {}
-}
-
-public class FileOutput: ILoggerOutput {
-  public weak var delegate: FileOutputDelegate?
-  
-  private let fileURL: URL
+class FileOutput: ILoggerOutput {
+  let fileURL: URL
   private let fileManager = FileManager.default
   
-  public init(path: String, file: String) {
+  init(path: String, file: String) {
     let url = FileManager.default.homeDirectoryForCurrentUser
     if #available(macOS 13.0, *) {
       self.fileURL = url.appending(path: path + "/\(file)")
@@ -32,31 +21,36 @@ public class FileOutput: ILoggerOutput {
     }
   }
   
-  public func log(message: String) {
+  func log(message: String) {
     guard let data = (message + "\n").data(using: .utf8) else { return }
-    createFileIfNeeded()
     do {
+      try createFileIfNeeded()
       let fileHandle = try FileHandle(forWritingTo: fileURL)
       fileHandle.seekToEndOfFile()
       fileHandle.write(data)
       fileHandle.closeFile()
-      os_log(.default, "Success logged at file \(self.fileURL.absoluteString)")
+      os_log(.debug, "Successfuly logged at file %{public}s", fileURL.filePath)
     } catch {
       os_log(.error, "\(error.localizedDescription)")
-      delegate?.fileOutput(self, didFailWriteToFile: fileURL, error: error)
     }
   }
   
-  private func createFileIfNeeded() {
-    let filePath: String
-    if #available(macOS 13.0, *) {
-      filePath = fileURL.path()
-    } else {
-      filePath = fileURL.path
+  func getData() throws -> Data {
+    return try Data(contentsOf: fileURL)
+  }
+  
+  func removeData() throws {
+    if fileManager.fileExists(atPath: fileURL.filePath) {
+      try fileManager.removeItem(at: fileURL)
     }
+  }
+  
+  private func createFileIfNeeded() throws {
+    let filePath = fileURL.filePath
     guard !fileManager.fileExists(atPath: filePath) else {
       return
     }
+    try fileURL.createDirectoryIfNeeded()
     fileManager.createFile(atPath: filePath, contents: nil)
   }
 }

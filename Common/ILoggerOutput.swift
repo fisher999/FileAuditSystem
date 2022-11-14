@@ -7,6 +7,6 @@
 
 import Foundation
 
-public protocol ILoggerOutput {
+protocol ILoggerOutput: AnyObject {
   func log(message: String)
 }

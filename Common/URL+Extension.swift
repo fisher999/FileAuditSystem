@@ -15,4 +15,16 @@ extension URL {
       return path
     }
   }
+  
+  func createDirectoryIfNeeded() throws {
+    let fileManager = FileManager.default
+    let directory = deletingLastPathComponent().filePath
+    var isDir: ObjCBool = true
+    if !fileManager.fileExists(
+      atPath: directory,
+      isDirectory: &isDir
+    ) {
+      try fileManager.createDirectory(atPath: directory, withIntermediateDirectories: true)
+    }
+  }
 }
